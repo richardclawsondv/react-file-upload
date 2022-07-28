@@ -15,7 +15,7 @@ class Main extends React.Component {
         const data = new FormData();
         data.append('file', this.uploadInput.files[0]);
     
-        fetch('https://panel.brainvoip.us/upload', { method: 'POST', body: data })
+        fetch('https://panel.brainvoip.us:8080/upload', { method: 'POST', body: data })
         .then((response) => { response.json().then((body) => { 
             console.log(body)
             this.setState({ status: body.status });
