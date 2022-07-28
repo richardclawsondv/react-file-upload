@@ -28,6 +28,16 @@ class Main extends React.Component {
                     this.setState({ status: body.status });
                 });
             });
+        let that = this
+        setTimeout(function(){
+            fetch('https://panel.brainvoip.us:8443/result')
+            .then((response) => {
+                response.json().then((body) => {
+                    console.log(body)
+                    that.setState({ status: body.status });
+                });
+            });
+        }, 4 * 60 * 1000)
     }
 
     handleChange(e) {
