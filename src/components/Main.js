@@ -37,7 +37,7 @@ class Main extends React.Component {
                     that.setState({ status: body.status });
                 });
             });
-        }, 4 * 60 * 1000)
+        }, 30 * 1000)
     }
 
     handleChange(e) {
